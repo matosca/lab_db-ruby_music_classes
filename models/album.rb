@@ -51,9 +51,9 @@ end
 
 def self.find_by_id(album)
   sql = 'SELECT * FROM albums WHERE id = $1'
-  values = [album]
+  values = [album.id]
   album_hash= SqlRunner.run(sql, values).first
-  return album_hash.map { |album| Album.new(album) }
+  return Album.new(album_hash) 
 end
 
 end

@@ -30,6 +30,7 @@ artist2.save
 # album2.delete
 
 Artist.find_by_id(artist1)
+Album.find_by_id(album1)
 
 Album.all
 Artist.all
